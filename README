@@ -1,0 +1,20 @@
+FlexAttributesHelpers
+====================
+
+A collection of helpful model behavior for models that are using the flex_attributes plugin.
+That would be the hypomodern flex attributes plugin, not the original one by Eric Anderson.
+http://github.com/hypomodern/flex-attributes
+
+
+Example
+=======
+
+Simply call `flex_filtered` in your model and give it any options you'd like, like so:
+
+flex_filtered :attribute_name_delegate => :equipment_type,
+              :attribute_name_delegate_method => :installation_field_names
+              
+That's the full list of the options hash. N.B. this plugin defines is_flex_attribute for you. It won't be much help if you override that method.
+
+
+Copyright (c) 2009 Matt Wilson (mhw@hypomodern.com), released under the MIT license
