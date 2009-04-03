@@ -46,7 +46,7 @@ module Hypomodern
             method = flex_filtered_options[:attribute_name_delegate_method]
             @attribute_names = (method) ?
               (delegate = self.send(delegate)
-              delegate.send(method)) :
+              delegate.send(method) rescue []) :
               self.send(delegate)
           else
             @attribute_names = flex_options[:fields] rescue []
